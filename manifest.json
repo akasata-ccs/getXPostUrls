@@ -1,0 +1,21 @@
+{
+  "name": "getXPostUrls",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "author": "akasata_ccs",
+  "description": "TwitterのブックマークまたはメディアからURLリストを取得する",
+  "content_scripts": [{
+    "matches": [
+      "https://x.com/i/bookmarks",
+      "https://twitter.com/i/bookmarks"
+  ],
+    "js": ["bookmark.js"]
+  },
+  {
+    "matches": [
+      "https://x.com/*/media",
+      "https://twitter.com/*/media"
+  ],
+    "js": ["media.js"]
+  }]
+}
